@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+
+h1{
+    text-transform: uppercase; /*it will automatically make all characters uppercase*/
+    font-size: 3rem;
+}
+
+#myPic{
+    border: 5px solid white;
+    width:100%;
+}
+
+.myDiv{
+    width: 50%;
+    margin-top: 100px;
+    margin-left: 25%;
+    color:white;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+}
