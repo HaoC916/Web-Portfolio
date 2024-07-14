@@ -19,11 +19,111 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+
+    /* require to set the parent's container, such as html, body
+    because '.conteriner' will align with the parent container */
+    html, body{
+      height: 100%; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container{
+      height: 748px;
+      width: 748px;
+      background-color: #F0F1EC;
+      display: grid;
+      grid-template-columns: 320px 428px;
+      grid-template-rows: 414px 334px;
+    }
+
+    .container > .leftUp{
+      background-color: #E72F24;
+      border: solid black;
+      border-width: 0px 9px 9px 0px;
+    }
+
+    .container > .rightUp{
+      border-bottom: 9px solid black;
+    }
+
+    .container > .leftDown{
+      /* background-color: aqua; */
+      display: grid;
+      grid-template-rows: 304px 30px;
+      border-right: 9px solid black;
+    }
+    
+    .leftDown > .leftBottom{
+      /* background-color: green; */
+      border-top: 9px solid black;
+    }
+
+    .container > .rightDown{
+      display: grid;
+      grid-template-columns: 351px 77px;
+    }
+
+    .rightDown > .rightLeft{
+      display: grid;
+      grid-template-rows: 304px 30px;
+      border-right: 9px solid black;
+    }
+    
+    .rightLeft > .RLDown{
+      display: grid;
+      grid-template-columns: 198px 153px;
+      border-top: 9px solid black;
+    }
+
+    .RLDown > .RLLeft{
+      background-color: #F9D01E;;
+    }
+
+    .RLDown > .RLRight{
+      background-color: #232629;
+    }
+
+    .rightDown > .rightRight{
+      display: grid;
+      grid-template-rows: 130px 204px;
+    }
+
+    .rightRight > .RRUp{
+      background-color: #004592;
+      border-bottom: 10px solid black;
+    }
+
+
+
+
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+   <div class="container">
+    <div class="leftUp"></div>
+    <div class="rightUp"></div>
+    <div class="leftDown">
+      <div class = "leftMiddle"></div>
+      <div class = "leftBottom"></div>
+    </div>
+    <div class="rightDown">
+      <div class = "rightLeft">
+        <div class = "RLUp"></div>
+        <div class = "RLDown">
+          <div class = "RLLeft"></div>
+          <div class = "RLRight"></div>  
+        </div>
+      </div>
+      <div class = "rightRight">
+        <div class = "RRUp"></div>
+        <div class ="RRDown"></div>
+      </div>
+    </div>
+   </div>
 </body>
 
 </html>
